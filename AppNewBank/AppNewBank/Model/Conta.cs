@@ -9,6 +9,7 @@ namespace AppNewBank.Model
         public int Id { get; set; }
         public string Tipo { get; set; }
         public double Saldo { get; set; }
+        public double Limite { get; set; }
         public int Id_Correntista { get; set; }
     }
 }
