@@ -13,7 +13,7 @@
 
                 <Button Text="Entrar"/>
             </StackLayout>
-            <Button Text="Novo Correntista" FontSize="Small"/>
+            <Button Text="Novo Correntista" FontSize="Small" Clicked="Button_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
