@@ -13,6 +13,7 @@ namespace AppNewBank.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            // Força modo claro
             AppCompatDelegate.DefaultNightMode = AppCompatDelegate.ModeNightNo;
             base.OnCreate(savedInstanceState);
 
