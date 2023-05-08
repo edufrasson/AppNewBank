@@ -9,13 +9,29 @@ namespace AppNewBank.Service
 {
     public class DataServiceCorrentista : DataService
     {
-        public async Task<Correntista> Cadastrar(Correntista c)
+        public static async Task<Correntistas> Cadastrar(Correntistas c)
         {
             var json_to_send = JsonConvert.SerializeObject(c);
 
             string json = await DataService.PostDataToService(json_to_send, "/correntista/save");
 
-            Correntista correntista = JsonConvert.DeserializeObject<Correntista>(json);
+            Correntistas correntista = JsonConvert.DeserializeObject<Correntistas>(json);
+
+            return correntista;
+        }
+
+        public static async Task<Correntistas> Autorizar(Correntistas c)
+        {
+            var json_to_send = JsonConvert.SerializeObject(c);
+
+            string json = await DataService.GetDataFromService(String.Format("/correntista/entrar?cpf={0}&senha={1}", c.CPF, c.Senha));
+
+            Correntistas correntista = new Correntistas();
+            if(json != "false")
+            {
+                correntista = JsonConvert.DeserializeObject<Correntistas>(json);
+            }
+            
 
             return correntista;
         }
