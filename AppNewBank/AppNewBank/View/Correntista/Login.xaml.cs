@@ -18,6 +18,7 @@ namespace AppNewBank.View.Correntista
 		{
 			InitializeComponent ();
             NavigationPage.SetHasNavigationBar(this, false);
+            imgLogo.Source = ImageSource.FromResource("AppNewBank.View.assets.img.nubank-logo.png");
         }
 
         private void Button_Clicked(object sender, EventArgs e)
@@ -27,14 +28,16 @@ namespace AppNewBank.View.Correntista
 
         private async void Button_Clicked_1(object sender, EventArgs e)
         {
+            carregando.IsRunning = true;
             try
             {
+                Console.WriteLine(txtCPF.Text);
                 Correntistas c = await DataServiceCorrentista.Autorizar(new Correntistas
                 {                   
                     Senha = txtSenha.Text,                   
                     CPF = txtCPF.Text
                 });
-                Console.WriteLine(c.Id);
+                
                 if(c.Id != 0){
                     string msg = $"Correntista logado com sucesso. Código gerado: {c.Id} ";
 
@@ -55,6 +58,9 @@ namespace AppNewBank.View.Correntista
             catch (Exception ex)
             {
                 await DisplayAlert("Ops", ex.Message, "OK");
+            }
+            finally{
+                carregando.IsRunning = false;
             }
         }
     }

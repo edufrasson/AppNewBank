@@ -5,7 +5,7 @@
     <Application.Resources>
         <ResourceDictionary> 
             <Style x:Key="backgroundStyle" TargetType="StackLayout">
-                <Setter Property="BackgroundColor" Value="#612F74"/>
+                <Setter Property="BackgroundColor" Value="#820AD1"/>
             </Style>
         </ResourceDictionary>
     </Application.Resources>
