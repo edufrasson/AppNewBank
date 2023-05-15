@@ -15,6 +15,10 @@ namespace AppNewBank.Service
 
             string json = await DataService.PostDataToService(json_to_send, "/correntista/save");
 
+            Console.WriteLine("_____________________________________________");
+            Console.WriteLine(json);
+            Console.WriteLine("_____________________________________________");
+
             Correntistas correntista = JsonConvert.DeserializeObject<Correntistas>(json);
 
             return correntista;

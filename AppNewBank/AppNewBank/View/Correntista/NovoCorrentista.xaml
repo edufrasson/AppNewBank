@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:control="clr-namespace:Xamarin.Forms.MaskedEntry;assembly=Xamarin.Forms.MaskedEntry"
              x:Class="AppNewBank.View.Correntista.NovoCorrentista"
              BackgroundColor="#820AD1">
     <ContentPage.Content
@@ -41,7 +41,7 @@
 
                     <Label Text="CPF:"  TextColor="Black"
                            FontSize="Medium" Padding="10"/>
-                    <Entry x:Name="txtCPF"/>
+                    <control:MaskedEntry x:Name="txtCPF"  Mask="XXX.XXX.XXX-XX"/>
 
                     <Label Text="Data de Nascimento:"  TextColor="Black"
                            FontSize="Medium" Padding="10"/>

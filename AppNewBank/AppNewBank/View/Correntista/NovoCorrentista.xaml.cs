@@ -23,7 +23,8 @@ namespace AppNewBank.View.Correntista
         private async void Button_Clicked(object sender, EventArgs e)
         {
             try
-            {              
+            {
+                Console.WriteLine(txtCPF.Text);
                 Correntistas c = await DataServiceCorrentista.Cadastrar(new Correntistas
                 {
                     Nome = txtNome.Text,
@@ -31,7 +32,7 @@ namespace AppNewBank.View.Correntista
                     Data_Nasc = txtDataNasc.Date.ToString("yyyy-MM-dd"),
                     CPF = txtCPF.Text
                 });
-
+                
                 string msg = $"Correntista inserido com sucesso. Código gerado: {c.Id} ";
 
                 await DisplayAlert("Sucesso!", msg, "OK");
@@ -40,7 +41,8 @@ namespace AppNewBank.View.Correntista
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Ops", ex.Message, "OK");
+                Console.WriteLine(ex.ToString());
+                await DisplayAlert("Ops, button error", ex.Message, "OK");
             }
 
         }

@@ -10,13 +10,13 @@
             <Frame
                 CornerRadius="10"  
                 BorderColor="White"
-                HeightRequest="420"
+                HeightRequest="450"
                 VerticalOptions="EndAndExpand"
                 Padding="0"
                 >
                 <StackLayout BackgroundColor="white"  
-                             HeightRequest="420" 
-                             Margin="20, 20, 20, 0"
+                             HeightRequest="450" 
+                             Margin="20, 20, 10, 0"
                              VerticalOptions="Center">
                     <Label Text="CPF do Correntista:" 
                            FontSize="Medium" Padding="10"
@@ -29,14 +29,14 @@
                     <Entry x:Name="txtSenha" IsPassword="True"/>
 
 
-                    <Button Margin="0, 25, 0, 0" 
+                    <Button Margin="0, 0, 0, 0" 
                             HorizontalOptions="Center" 
                             Text="Entrar" 
                             BackgroundColor="#820AD1" 
                             TextColor="White" 
                             Clicked="Button_Clicked_1"/>
                     
-                    <Button Margin="0, 25, 0, 0" 
+                    <Button Margin="0, 5, 0, 0" 
                             TextColor="#820AD1" 
                             Text="Novo Correntista" 
                             BackgroundColor="Transparent" 
