@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppNewBank.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,9 @@ namespace AppNewBank.View
         public Home()
         {
             InitializeComponent();
+            this.Title = "Bem vindo, "+ Convert.ToString(Application.Current.Properties["nome_correntista"]) + "!";
         }
+
+
     }
 }

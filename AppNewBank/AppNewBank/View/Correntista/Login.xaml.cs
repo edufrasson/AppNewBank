@@ -42,7 +42,8 @@ namespace AppNewBank.View.Correntista
                     string msg = $"Correntista logado com sucesso. Código gerado: {c.Id} ";
 
                     await DisplayAlert("Sucesso!", msg, "OK");
-
+                    Application.Current.Properties.Add("id_correntista", c.Id);
+                    Application.Current.Properties.Add("nome_correntista", c.Nome);
                     await Navigation.PushAsync(new View.Home());
                 }
                 else
