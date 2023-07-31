@@ -6,7 +6,45 @@
             
     <ContentPage.Content>
         <StackLayout>
-            
+            <StackLayout
+            HeightRequest="130"
+            BackgroundColor="#820AD1"
+            >
+                <Grid HeightRequest="130"
+                      RowDefinitions="*, *"
+                      ColumnDefinitions="*, *"
+                      >
+                    <Image
+                        x:Name="logoImg"
+                        Margin="0, 0, 115, 0"
+                        Grid.Row="0" Grid.Column="0"
+                        />
+                    <Label Grid.Row="1" 
+                           Grid.Column="0"
+                           FontSize="Medium"
+                           TextColor="White"
+                           x:Name="labelWelcome"
+                           Padding="15, 0, 0, 0"
+                           >
+                        
+                    </Label>                    
+                    <ImageButton
+                      
+                        Padding="400, 0, 0, 0"
+                        x:Name="showIcon"
+                        Clicked="showIcon_Clicked"
+                        BackgroundColor="Transparent"
+                        Scale="0.15"
+                        ScaleY="2.9"
+                        Aspect="Fill"
+                        Grid.Row="0" Grid.Column="1"
+                        />
+                </Grid>
+            </StackLayout>
+            <StackLayout>
+                
+            </StackLayout>
         </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>

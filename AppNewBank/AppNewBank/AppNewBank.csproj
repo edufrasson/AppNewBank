@@ -12,10 +12,18 @@
 
   <ItemGroup>
     <None Remove="View\assets\img\nubank-logo.png" />
+    <None Remove="View\assets\logo-alt.png" />
+    <None Remove="View\assets\show-solid.png" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="View\assets\img\nubank-logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\assets\logo-alt.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\assets\show-solid.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

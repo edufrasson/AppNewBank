@@ -16,9 +16,16 @@ namespace AppNewBank.View
         public Home()
         {
             InitializeComponent();
-            this.Title = "Bem vindo, "+ Convert.ToString(Application.Current.Properties["nome_correntista"]) + "!";
+            labelWelcome.Text = "Olá, " + Convert.ToString(Application.Current.Properties["nome_correntista"]) + "!";
+            NavigationPage.SetHasNavigationBar(this, false);
+
+            showIcon.Source = ImageSource.FromResource("AppNewBank.View.assets.show-solid.png");
+            logoImg.Source = ImageSource.FromResource("AppNewBank.View.assets.img.nubank-logo.png");
         }
 
+        private void showIcon_Clicked(object sender, EventArgs e)
+        {
 
+        }
     }
 }
