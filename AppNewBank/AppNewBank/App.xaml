@@ -3,10 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppNewBank.App">
     <Application.Resources>
-        <ResourceDictionary> 
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="{OnPlatform Android='gellix.ttf#gellix'}"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="FontFamily" Value="{OnPlatform Android='gellix-medium.ttf#gellix'}"/>
+            </Style>
+            <Style x:Key="fontBold" TargetType="Label">
+                <Setter Property="FontFamily" Value="{OnPlatform Android='gellix-bold.ttf#gellix-bold'}"/>
+            </Style>
+
             <Style x:Key="backgroundStyle" TargetType="StackLayout">
                 <Setter Property="BackgroundColor" Value="#820AD1"/>
             </Style>
+           
         </ResourceDictionary>
     </Application.Resources>
 </Application>

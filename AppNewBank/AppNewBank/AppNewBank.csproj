@@ -11,16 +11,37 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="View\assets\icon-actions\doar.png" />
+    <None Remove="View\assets\icon-actions\investir.png" />
+    <None Remove="View\assets\icon-actions\pagar.png" />
+    <None Remove="View\assets\icon-actions\pix.png" />
+    <None Remove="View\assets\icon-actions\poupar.png" />
     <None Remove="View\assets\img\nubank-logo.png" />
     <None Remove="View\assets\logo-alt.png" />
+    <None Remove="View\assets\right.png" />
     <None Remove="View\assets\show-solid.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="View\assets\icon-actions\doar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\assets\icon-actions\investir.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\assets\icon-actions\pagar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\assets\icon-actions\pix.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\assets\img\nubank-logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="View\assets\logo-alt.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\assets\right.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="View\assets\show-solid.png">
@@ -33,6 +54,10 @@
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
     <PackageReference Include="Xamarin.Forms.MaskedEntry" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="View\assets\icon-actions\poupar.png" />
   </ItemGroup>
 
   <ItemGroup>

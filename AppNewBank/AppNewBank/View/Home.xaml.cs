@@ -20,7 +20,14 @@ namespace AppNewBank.View
             NavigationPage.SetHasNavigationBar(this, false);
 
             showIcon.Source = ImageSource.FromResource("AppNewBank.View.assets.show-solid.png");
+            btnVerExtrato.Source = ImageSource.FromResource("AppNewBank.View.assets.right.png");
             logoImg.Source = ImageSource.FromResource("AppNewBank.View.assets.img.nubank-logo.png");
+
+            btnPix.Source = ImageSource.FromResource("AppNewBank.View.assets.icon-actions.pix.png");
+            btnPagar.Source = ImageSource.FromResource("AppNewBank.View.assets.icon-actions.pagar.png");
+            btnInvestir.Source = ImageSource.FromResource("AppNewBank.View.assets.icon-actions.investir.png");
+            btnPoupar.Source = ImageSource.FromResource("AppNewBank.View.assets.icon-actions.poupar.png");
+            btnDoar.Source = ImageSource.FromResource("AppNewBank.View.assets.icon-actions.doar.png");
         }
 
         private void showIcon_Clicked(object sender, EventArgs e)
