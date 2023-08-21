@@ -42,7 +42,7 @@
                         />
                 </Grid>
             </StackLayout>
-            
+
             <StackLayout>
                 <Grid 
                     Padding="20"
@@ -62,23 +62,39 @@
                                  Aspect="Fill"
                                  Grid.Row="0" Grid.Column="1"/>
                 </Grid>
+            </StackLayout>
+            <StackLayout>
                 <Grid
-                    RowDefinitions="100" ColumnDefinitions="*, *, *, *, *"
+                    RowDefinitions="105" ColumnDefinitions="80, 80 , 80, 80" ColumnSpacing="15" Padding="7"
                     >
-                    <StackLayout Grid.Row="0" Grid.Column="0">
-                        <ImageButton Scale="0.1" x:Name="btnPix"/>
+                    <StackLayout  >
+                        <Frame CornerRadius="120"  VerticalOptions="FillAndExpand">
+                            <ImageButton Clicked="btnPix_Clicked" Scale="0.8" x:Name="btnPix"/>
+                        </Frame>
+                        
+                        <Label Text="Área Pix" HorizontalTextAlignment="Center"/>
                     </StackLayout>
-                    <StackLayout Grid.Row="0" Grid.Column="1">
-                        <ImageButton Scale="0.1" x:Name="btnPagar"/>            
+                    <StackLayout Grid.Row="0" Grid.Column="1" >
+                        <Frame CornerRadius="120" VerticalOptions="FillAndExpand">
+                            <ImageButton Clicked="btnPagar_Clicked" Scale="0.8" x:Name="btnPagar"/>
+                        </Frame>
+
+                        <Label Text="Pagar" HorizontalTextAlignment="Center"/>
                     </StackLayout>
-                    <StackLayout Grid.Row="0" Grid.Column="2">
-                        <ImageButton Scale="0.1" x:Name="btnInvestir"/>
+                    <StackLayout Grid.Row="0" Grid.Column="2" >
+                        <Frame CornerRadius="120" VerticalOptions="FillAndExpand">
+                            <ImageButton Clicked="btnInvestir_Clicked" Scale="0.8" x:Name="btnInvestir"/>
+                        </Frame>
+
+                        <Label Text="Investir" HorizontalTextAlignment="Center"/>
                     </StackLayout>
-                    <StackLayout Grid.Row="0" Grid.Column="3">
-                        <ImageButton Scale="0.1" x:Name="btnPoupar"/>
-                    </StackLayout>
-                    <StackLayout Grid.Row="0" Grid.Column="4">
-                        <ImageButton Scale="0.1" x:Name="btnDoar"/>
+
+                    <StackLayout Grid.Row="0" Grid.Column="3" >
+                        <Frame CornerRadius="120" VerticalOptions="FillAndExpand">
+                            <ImageButton Clicked="btnDoar_Clicked" Scale="0.8" x:Name="btnDoar"/>
+                        </Frame>
+
+                        <Label Text="Doar" HorizontalTextAlignment="Center"/>
                     </StackLayout>
                 </Grid>
             </StackLayout>

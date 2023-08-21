@@ -10,9 +10,13 @@
             <Style TargetType="Button">
                 <Setter Property="FontFamily" Value="{OnPlatform Android='gellix-medium.ttf#gellix'}"/>
             </Style>
+            <Style TargetType="ImageButton">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+            </Style>
             <Style x:Key="fontBold" TargetType="Label">
                 <Setter Property="FontFamily" Value="{OnPlatform Android='gellix-bold.ttf#gellix-bold'}"/>
             </Style>
+            
 
             <Style x:Key="backgroundStyle" TargetType="StackLayout">
                 <Setter Property="BackgroundColor" Value="#820AD1"/>

@@ -11,34 +11,37 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="View\assets\icon-actions\doar.png" />
-    <None Remove="View\assets\icon-actions\investir.png" />
-    <None Remove="View\assets\icon-actions\pagar.png" />
-    <None Remove="View\assets\icon-actions\pix.png" />
-    <None Remove="View\assets\icon-actions\poupar.png" />
+    <None Remove="View\assets\doar.png" />
     <None Remove="View\assets\img\nubank-logo.png" />
+    <None Remove="View\assets\investir.png" />
     <None Remove="View\assets\logo-alt.png" />
+    <None Remove="View\assets\pagar.png" />
+    <None Remove="View\assets\pix.png" />
+    <None Remove="View\assets\poupar.png" />
     <None Remove="View\assets\right.png" />
     <None Remove="View\assets\show-solid.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="View\assets\icon-actions\doar.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\assets\icon-actions\investir.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\assets\icon-actions\pagar.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\assets\icon-actions\pix.png">
+    <EmbeddedResource Include="View\assets\doar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="View\assets\img\nubank-logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\assets\investir.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\assets\logo-alt.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\assets\pagar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\assets\pix.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\assets\poupar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="View\assets\right.png">
@@ -57,14 +60,28 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Page Include="View\assets\icon-actions\poupar.png" />
-  </ItemGroup>
-
-  <ItemGroup>
     <EmbeddedResource Update="View\Correntista\Login.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Correntista\NovoCorrentista.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\Funcoes\AreaPix.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\Funcoes\Doar.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\Funcoes\EnviarPix.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\Funcoes\Investir.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\Funcoes\PagarQRCode.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\Funcoes\ReceberPix.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Home.xaml">

@@ -1,4 +1,6 @@
 ﻿using AppNewBank.Model;
+using AppNewBank.View.Correntista;
+using AppNewBank.View.Funcoes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,16 +25,36 @@ namespace AppNewBank.View
             btnVerExtrato.Source = ImageSource.FromResource("AppNewBank.View.assets.right.png");
             logoImg.Source = ImageSource.FromResource("AppNewBank.View.assets.img.nubank-logo.png");
 
-            btnPix.Source = ImageSource.FromResource("AppNewBank.View.assets.icon-actions.pix.png");
-            btnPagar.Source = ImageSource.FromResource("AppNewBank.View.assets.icon-actions.pagar.png");
-            btnInvestir.Source = ImageSource.FromResource("AppNewBank.View.assets.icon-actions.investir.png");
-            btnPoupar.Source = ImageSource.FromResource("AppNewBank.View.assets.icon-actions.poupar.png");
-            btnDoar.Source = ImageSource.FromResource("AppNewBank.View.assets.icon-actions.doar.png");
+            btnPix.Source = ImageSource.FromResource("AppNewBank.View.assets.pix.png");
+            btnPagar.Source = ImageSource.FromResource("AppNewBank.View.assets.pagar.png");
+            btnInvestir.Source = ImageSource.FromResource("AppNewBank.View.assets.investir.png");
+            
+            btnDoar.Source = ImageSource.FromResource("AppNewBank.View.assets.doar.png");
         }
 
         private void showIcon_Clicked(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnPix_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AreaPix());
+        }
+
+        private void btnPagar_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PagarQRCode());
+        }
+
+        private void btnInvestir_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Investir());
+        }
+
+        private void btnDoar_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Doar());
         }
     }
 }
