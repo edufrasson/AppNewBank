@@ -19,6 +19,7 @@ namespace AppNewBank.View
         {
             InitializeComponent();
             labelWelcome.Text = "Olá, " + Convert.ToString(Application.Current.Properties["nome_correntista"]) + "!";
+            txtSaldo.Text = "R$ " + Convert.ToString(Application.Current.Properties["saldo_correntista"]);
             NavigationPage.SetHasNavigationBar(this, false);
 
             showIcon.Source = ImageSource.FromResource("AppNewBank.View.assets.show-solid.png");

@@ -50,7 +50,7 @@
                     <Label 
                         Style="{StaticResource fontBold}"
                         Text="Saldo" FontSize="Medium" FontAttributes="Bold" Grid.Row="0" Grid.Column="0"/>
-                    <Label x:Name="txtSaldo" Text="R$ 186,62" 
+                    <Label x:Name="txtSaldo" Text="" 
                            FontSize="Medium"
                            Grid.Row="1" Grid.Column="0"/>
 

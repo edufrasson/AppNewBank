@@ -30,6 +30,10 @@ namespace AppNewBank.Service
 
             string json = await DataService.GetDataFromService(String.Format("/correntista/entrar?cpf={0}&senha={1}", c.CPF, c.Senha));
 
+            Console.WriteLine("_____________________________________________");
+            Console.WriteLine(json);
+            Console.WriteLine("_____________________________________________");
+
             Correntistas correntista = new Correntistas();
             if(json != "false")
             {

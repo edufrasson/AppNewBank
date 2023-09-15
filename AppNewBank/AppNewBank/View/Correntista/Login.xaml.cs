@@ -31,19 +31,24 @@ namespace AppNewBank.View.Correntista
             carregando.IsRunning = true;
             try
             {
-                Console.WriteLine(txtCPF.Text);
+                
                 Correntistas c = await DataServiceCorrentista.Autorizar(new Correntistas
                 {                   
                     Senha = txtSenha.Text,                   
                     CPF = txtCPF.Text
                 });
-                
-                if(c.Id != 0){
+                Console.WriteLine("==========================");
+                Console.WriteLine(c);
+                Console.WriteLine("==========================");
+
+                if (c.Id != 0){
                     string msg = $"Correntista logado com sucesso. Código gerado: {c.Id} ";
 
                     await DisplayAlert("Sucesso!", msg, "OK");
                     Application.Current.Properties.Add("id_correntista", c.Id);
                     Application.Current.Properties.Add("nome_correntista", c.Nome);
+                    Application.Current.Properties.Add("saldo_correntista", c.Saldo);
+
                     await Navigation.PushAsync(new View.Home());
                 }
                 else

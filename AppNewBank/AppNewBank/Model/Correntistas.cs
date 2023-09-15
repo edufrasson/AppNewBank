@@ -11,5 +11,6 @@ namespace AppNewBank.Model
         public string Senha { get; set; }
         public string CPF { get; set; }
         public string Data_Nasc { get; set; }
+        public double Saldo { get; set; }
     }
 }
