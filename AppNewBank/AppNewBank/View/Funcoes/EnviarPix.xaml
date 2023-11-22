@@ -1,12 +1,61 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
              x:Class="AppNewBank.View.Funcoes.EnviarPix">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <!-- Cabeçalho -->
+            <StackLayout
+            HeightRequest="80"
+            BackgroundColor="#820AD1"
+            >
+                <Grid HeightRequest="130"
+                      RowDefinitions="*, *"
+                      ColumnDefinitions="*, *"
+                      >
+                    <Image
+                        x:Name="logoImg"
+                        Margin="0, 0, 115, 0"
+                        Grid.Row="0" Grid.Column="0"
+                        />
+                    <Label Grid.Row="1" 
+                           Grid.Column="0"
+                           FontSize="Medium"
+                           TextColor="White"
+                           x:Name="labelWelcome"
+                           Padding="15, 0, 0, 0"
+                           >
+
+                    </Label>
+                    
+                </Grid>
+            </StackLayout>
+
+            <StackLayout>
+                <Frame VerticalOptions="CenterAndExpand" HeightRequest="600" CornerRadius="10" Margin="10" BackgroundColor="Aquamarine">
+                    <Frame.Background>
+                        <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                            <GradientStop Color="#802CBB" Offset="0.3"/>
+                            <GradientStop Color="#5F0594" Offset="1.1"/>
+                        </LinearGradientBrush>
+                    </Frame.Background>
+
+                    <Grid VerticalOptions="CenterAndExpand" Margin="0,17,0,-80">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="6*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <zxing:ZXingScannerView x:Name="zxing" 
+                                VerticalOptions="FillAndExpand"/>
+                        <zxing:ZXingDefaultOverlay TopText="Segure o Telefone no QR Code"
+                                   BottomText="O resultado vai aparecer abaixo"/>
+                    </Grid>
+                </Frame>
+            </StackLayout>
+            
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>

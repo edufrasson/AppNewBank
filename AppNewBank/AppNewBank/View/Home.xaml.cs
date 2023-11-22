@@ -45,12 +45,12 @@ namespace AppNewBank.View
 
         private void btnPagar_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new PagarQRCode());
+            Navigation.PushAsync(new EnviarPix());
         }
 
         private void btnInvestir_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Investir());
+            Navigation.PushAsync(new ReceberPix());
         }
 
         private void btnDoar_Clicked(object sender, EventArgs e)

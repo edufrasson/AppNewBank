@@ -15,6 +15,8 @@ namespace AppNewBank.View.Funcoes
         public EnviarPix()
         {
             InitializeComponent();
+
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }

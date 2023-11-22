@@ -86,7 +86,7 @@
                             <ImageButton Clicked="btnInvestir_Clicked" Scale="0.8" x:Name="btnInvestir"/>
                         </Frame>
 
-                        <Label Text="Investir" HorizontalTextAlignment="Center"/>
+                        <Label Text="Receber" HorizontalTextAlignment="Center"/>
                     </StackLayout>
 
                     <StackLayout Grid.Row="0" Grid.Column="3" >
